@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    background-color: blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.contenedor-main{
+
+max-width:  1024px ;
+width: 100%;
+display: flex;
+flex-direction: column;
+gap:1rem;
+
+
+}
+
+.contenedor__superior{
+    width: 100%;
+    display: flex;
+    gap:1rem;
+}
+.contenedor__superios-caja1{
+    background-color: lightblue;
+    width: 50%;
+    height: 200px;
+    border-radius: 1rem;
+}
+.contenedor__superios-caja2{
+    background-color: lightcoral;
+    width: 50%;
+    height: 200px;
+    border-radius: 1rem;
+}
+
+.contenedor__infiriol{
+
+    display: flex;
+    gap: 1rem;
+}
+.contenedor__infiriol--cajas{
+    width: 70%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.contenedor__infiriol--caja__hemana{
+    width: 30%;
+    background-color: black;
+    border-radius: 1rem;
+    
+
+}
+.cajas{
+    height:200px;
+    border-radius: 1rem;
+    flex-basis: calc(33% - 1rem);
+}
+.cajas:nth-child(1){
+    background-color: lightgreen;
+}
+.cajas:nth-child(2){
+    background-color: lightpink;
+}
+.cajas:nth-child(3){
+    background-color: lightsalmon;
+}
+.cajas:nth-child(4){
+    background-color: lightseagreen;
+}
+.cajas:nth-child(5){
+    background-color: lightskyblue;
+}
+.cajas:nth-child(6){
+    background-color: lightslategrey;
+}
+
+@media(max-width: 1000px ){
+    .contenedor{
+        background-color: green;
+    }
+    .contenedor__infiriol--cajas{
+        width: 60%;
+    }
+    .contenedor__infiriol--caja__hemana{
+        width: 40%;
+    }
+    .cajas{
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+@media(max-width: 800px){
+    .contenedor{
+        background-color: red;
+    }
+    .cajas{
+        flex-basis: calc(100% - 1rem);
+    }
+}
+@media(max-width: 600px){
+    .contenedor{
+        background-color: aliceblue;
+    }
+    .contenedor__superios-caja1{
+        flex-basis: calc(100% - 1rem);
+    }
+    .contenedor__superios-caja2{
+        flex-basis: calc(100% - 1rem);
+    }
+    .contenedor__infiriol--caja__hemana{
+        flex-basis: calc(100% - 1rem);
+        height: 200px;
+    }
+    .contenedor__infiriol{
+        flex-wrap: wrap;
+    }
+    .contenedor__superior{
+        flex-wrap: wrap;
+    }
+    .contenedor__infiriol--cajas{
+        width: 100%;
+    }
+}
